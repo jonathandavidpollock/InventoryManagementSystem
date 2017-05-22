@@ -1,0 +1,27 @@
+.card{
+  background: $light;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0px 0px 30px rgba($dark, .5);
+  align-self: flex-start;
+  flex-basis: 100%;
+
+  @include mq(largeAndBigger){
+      flex-basis: calc(100%/2 - 50px);
+      font-size: 1.2rem;
+  }
+
+  ul li {
+    margin-bottom: 5px;
+
+    span{
+      font-family: $fontface;
+      font-size: 1.3em;
+      font-weight: bolder;
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,9 +1,11 @@
-body{
-  background-color: #282C34;
-}
+@import "layout/mixins";
+@import "layout/variables";
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+@import "components/components";
 
-h1{
-  width: 100vw;
-  color: lighten(#282C34, 90);
-  padding: 20px;
-}
+// fontawesome
+@import "scss/utilities/font-awesome.scss";
+
+@import "layout/page";

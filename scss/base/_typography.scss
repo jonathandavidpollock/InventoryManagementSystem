@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400|Oswald:400,600');
+$fontface:  'Oswald', sans-serif;
+$sitefont: 'Open Sans', sans-serif;
+
+html{
+  font-family: $sitefont;
+}
+
+// Font-size Set up
+$font-base-line: 62.5%; //baseline on html
+$size: 1.6rem;
+$lineh: 1.45;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $fontface;
+    line-height: 1em;
+    margin-bottom: 0.3em;
+}
+
+//headline scale
+$scale: 1.3;
+
+// variables for sizes
+$s-h6: $size;
+$s-h5: $s-h6 * $scale;
+$s-h4: $s-h5 * $scale;
+$s-h3: $s-h4 * $scale;
+$s-h2: $s-h3 * $scale;
+$s-h1: $s-h2 * $scale;
+
+// applying scale
+h1 {font-size: $s-h1;}
+h2 {font-size: $s-h2;}
+h3 {font-size: $s-h3;}
+h4 {font-size: $s-h4;}
+h5 {font-size: $s-h5;}
+h6 {font-size: $s-h6;}

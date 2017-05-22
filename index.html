@@ -7,7 +7,67 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <h1>Boilerplate v1</h1>
+    <header>
+      <!-- <h1>Logo</h1> -->
+      <h1 class="logo">
+        <img src="http://placehold.it/100x75?text=logo" alt="Logo">
+        <span>App Name</span>
+
+      </h1>
+      <nav id="menu">
+        <ul>
+          <li>
+            <button class="btn add good">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>  add
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="search-form">
+
+      <form action="">
+        <input type="text" name="keyword" id="keyword" placeholder="Search here">
+        <button class="btn magnifyglass"><i class="fa fa-search" aria-hidden="true" ></i></button>
+      </form>
+
+    </main>
+
+    <section id="results">
+
+        <ul class="table">
+          <li class="row">
+            <ul class="table-head">
+              <li class="col">header table</li>
+              <li class="col">header table</li>
+              <li class="col">header table</li>
+              <li class="col">header table</li>
+              <li class="col">header table</li>
+            </ul>
+          </li>
+          <li class="row">
+            <ul class="field">
+              <li class="col">field value</li>
+              <li class="col">field value</li>
+              <li class="col">field value</li>
+              <li class="col">
+                <button class="btn add alert">
+                <i class="fa fa-pencil" aria-hidden="true"></i>  edit
+                </button>
+              </li>
+              <li class="col">
+                <button class="btn add bad">
+                  <span class="icon">
+                  <i class="fa fa-trash" aria-hidden="true"></i>delete
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+    </section>
+
   </body>
   <script src="js/app.js" charset="utf-8"></script>
 </html>
