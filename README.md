@@ -1,2 +1,2 @@
 # InventoryManagementSystem
-## Inventor system using Laravel/PHP
+## Inventory system using Laravel/PHP
