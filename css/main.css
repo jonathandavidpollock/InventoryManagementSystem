@@ -109,6 +109,43 @@ h6 {
       display: block;
       width: 100%; }
 
+.table {
+  width: 100%; }
+  .table .col {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%; }
+  .table .col-small {
+    -ms-flex-preferred-size: 8%;
+        flex-basis: 8%; }
+  .table .table-head {
+    font-weight: bold;
+    background-color: #3b5998;
+    color: white;
+    margin-top: 1px; }
+    .table .table-head li {
+      padding: 1.3rem;
+      border-left: 1px solid white;
+      line-height: 3.8rem; }
+  .table .table-head, .table .field {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .table > li {
+    transition: background 100ms ease; }
+    .table > li > .field li {
+      padding: 1.3rem;
+      border-left: 1px solid white;
+      line-height: 3.8rem; }
+    .table > li:nth-child(odd) {
+      background-color: #dfe3ee; }
+    .table > li:nth-child(odd):hover {
+      background-color: #cdd7ec; }
+    .table > li:nth-child(even):hover {
+      background-color: rgba(139, 157, 195, 0.1); }
+  .table > li ul li {
+    display: inline-block; }
+
 input {
   padding: 1rem 2rem;
   border: 1px solid rgba(247, 247, 247, 0.3);
@@ -137,14 +174,6 @@ input {
   font-weight: bold;
   font-size: 1.6rem;
   display: inline; }
-
-.magnifyglass {
-  background-color: #dfe3ee;
-  border-radius: 0;
-  color: #3b5998; }
-  .magnifyglass:hover {
-    background-color: #3b5998;
-    color: #dfe3ee; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2524,15 +2553,3 @@ header {
   display: flex;
   width: 80vw;
   margin: 0px auto; }
-  #results .table {
-    width: 100%; }
-    #results .table .table-head {
-      font-weight: bold;
-      color: #3b5998; }
-    #results .table > li ul {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
-    #results .table > li ul li {
-      display: inline-block; }

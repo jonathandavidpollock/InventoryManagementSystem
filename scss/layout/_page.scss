@@ -83,25 +83,6 @@ header{
   margin: 0px auto;
   // background-color: rgba(black, .1);
 
-  .table{
-    width: 100%;
-
-    .table-head{
-      font-weight: bold;
-      color: $primary;
-    }
-
-    & > li ul{
-      display: flex;
-      justify-content: space-around;
-      // background: red;
-    }
-
-    & > li ul li{
-      display: inline-block;
-    }
-  }
-
 }
 
 // /#list
