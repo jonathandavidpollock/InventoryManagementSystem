@@ -49,15 +49,20 @@ header{
     display: flex;
     width: 50vw;
     margin: 50px auto;
-    // background: red;
     align-items: stretch;
     border: 1px solid rgba($primary, .4);
-    // box-shadow: 3px 3px 0px 0px rgba($primary, .4);
+    @include mq(mediumAndless){
+      width: 80vw;
+    }
 
     input{
       flex-basis: 45vw;
       padding: 2rem;
       color: $primary;
+
+      @include mq(mediumAndless){
+        flex-basis: 75vw;
+      }
     }
 
     .magnifyglass{

@@ -114,6 +114,11 @@ h6 {
   .table .col {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%; }
+    .table .col .title {
+      font-weight: bold;
+      font-size: 1em;
+      margin: 10px 0px 0px 0px;
+      color: #3b5998; }
   .table .col-small {
     -ms-flex-preferred-size: 8%;
         flex-basis: 8%; }
@@ -131,18 +136,44 @@ h6 {
     display: flex;
     -ms-flex-pack: justify;
         justify-content: space-between; }
+    @media only screen and (max-width: 768px) {
+      .table .table-head, .table .field {
+        display: block;
+        margin: 10px;
+        padding: 1rem; } }
   .table > li {
     transition: background 100ms ease; }
     .table > li > .field li {
       padding: 1.3rem;
       border-left: 1px solid white;
       line-height: 3.8rem; }
+      @media only screen and (max-width: 768px) {
+        .table > li > .field li {
+          border-left: 0px;
+          padding: 0px 1rem;
+          line-height: 2rem;
+          display: block; }
+          .table > li > .field li:nth-last-of-type(-n+2) {
+            margin: 2rem;
+            display: inline-block;
+            width: 30%; } }
     .table > li:nth-child(odd) {
       background-color: #dfe3ee; }
     .table > li:nth-child(odd):hover {
       background-color: #cdd7ec; }
     .table > li:nth-child(even):hover {
       background-color: rgba(139, 157, 195, 0.1); }
+      @media only screen and (max-width: 768px) {
+        .table > li:nth-child(even):hover {
+          background-color: #cdd7ec; } }
+    @media only screen and (max-width: 768px) {
+      .table > li {
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 1px 1px 3px rgba(139, 157, 195, 0.1); }
+        .table > li:nth-child(odd) {
+          background-color: #fff;
+          border-radius: 2px; } }
   .table > li ul li {
     display: inline-block; }
 
@@ -174,6 +205,16 @@ input {
   font-weight: bold;
   font-size: 1.6rem;
   display: inline; }
+
+@media only screen and (max-width: 768px) {
+  .hide-mediumAndLess {
+    display: none; } }
+
+.show-mediumAndLess {
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .show-mediumAndLess {
+      display: block; } }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2532,11 +2573,18 @@ header {
   -ms-flex-align: stretch;
       align-items: stretch;
   border: 1px solid rgba(59, 89, 152, 0.4); }
+  @media only screen and (max-width: 768px) {
+    #search-form form {
+      width: 80vw; } }
   #search-form form input {
     -ms-flex-preferred-size: 45vw;
         flex-basis: 45vw;
     padding: 2rem;
     color: #3b5998; }
+    @media only screen and (max-width: 768px) {
+      #search-form form input {
+        -ms-flex-preferred-size: 75vw;
+            flex-basis: 75vw; } }
   #search-form form .magnifyglass {
     background-color: #dfe3ee;
     border-radius: 0;
