@@ -2536,3 +2536,43 @@ header {
           justify-content: space-around; }
     #results .table > li ul li {
       display: inline-block; }
+
+#analytics {
+  width: 80vw;
+  margin: 5rem auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.weekView, .monthView {
+  text-align: center;
+  width: 45%;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-bottom: 2px solid #dddfe2;
+  border-radius: 2px; }
+  .weekView > h2, .monthView > h2 {
+    margin: 2rem;
+    line-height: 8rem;
+    border-bottom: 2px solid #3b5998; }
+
+.chartWrapper {
+  max-height: 300px;
+  padding: 1rem; }
+
+canvas {
+  max-height: 250px; }
+
+button:hover {
+  cursor: pointer;
+  transition: .4s; }
+
+@media only screen and (max-width: 768px) {
+  #analytics {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .weekView, .monthView {
+    width: 100%; } }

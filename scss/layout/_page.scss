@@ -104,4 +104,49 @@ header{
 
 }
 
+#analytics {
+  width: 80vw;
+  margin: 5rem auto;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.weekView, .monthView {
+  text-align: center;
+  width:45%;
+  margin: 2rem auto;
+  background-color: $white;
+  border-bottom: 2px solid #dddfe2;
+  border-radius: 2px;
+  & > h2 {
+    margin:2rem;
+    line-height: 8rem;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.chartWrapper {
+  max-height: 300px;
+  padding:1rem;
+}
+
+canvas {
+  max-height: 250px;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: .4s;
+}
+
+@include mq(mediumAndless) {
+  #analytics {
+    flex-direction: column;
+  }
+  .weekView, .monthView {
+    width:100%;
+  }
+}
+
 // /#list
