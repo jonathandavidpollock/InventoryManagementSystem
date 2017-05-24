@@ -2537,10 +2537,24 @@ header {
     #results .table > li ul li {
       display: inline-block; }
 
+.modal-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, 0.8); }
+
+.modal {
+  margin: auto; }
+
+.eModal {
+  margin: auto; }
+
 .add-modal {
   background-color: #f7f7f7;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 3rem;
   width: 25%;
   box-shadow: 0 0 41px -8px rgba(0, 0, 0, 0.75); }
   .add-modal h3 {
@@ -2573,11 +2587,21 @@ header {
   .md-form label {
     margin: 1rem; }
   .md-form select {
-    margin: 1rem; }
+    margin: 1rem;
+    font-size: 2rem; }
   .md-form p {
     margin-left: 9rem;
     margin-top: 1rem;
     margin-bottom: 1rem; }
+
+.modal-del-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, 0.8); }
 
 .cus-i {
   color: #FA3E3E;

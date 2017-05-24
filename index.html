@@ -17,7 +17,7 @@
       <nav id="menu">
         <ul>
           <li>
-            <button class="btn add good">
+            <button id="addBtn" class="btn add good">
             <i class="fa fa-plus-circle" aria-hidden="true"></i>  add
             </button>
           </li>
@@ -52,12 +52,12 @@
               <li class="col">field value</li>
               <li class="col">field value</li>
               <li class="col">
-                <button class="btn add alert">
+                <button id="btnEdit" class="btn add alert">
                 <i class="fa fa-pencil" aria-hidden="true"></i>  edit
                 </button>
               </li>
               <li class="col">
-                <button class="btn add bad">
+                <button id="btnDelete" class="btn add bad">
                   <span class="icon">
                   <i class="fa fa-trash" aria-hidden="true"></i>delete
                 </button>
@@ -65,9 +65,43 @@
             </ul>
           </li>
         </ul>
-
     </section>
-
+  <!-- Add Modal -->
+  <div class="modal-wrapper">
+   <div class="modal add-modal">
+      <h3>Add Items</h3>
+      <form action="" class="md-form">
+        <label>Name 
+          <input id="cus" type="text" id="name">
+        </label>
+        <label>Category  
+          <select>
+             <option value="Vegetables">Vegetables</option>
+             <option value="Fruits">Fruits</option>
+          </select>
+        </label>
+        <label>Quantity 
+          <input type="number" name="quantity">
+        </label>
+        <p><button type="submit" class="btn good cus-btn">Add</button>
+        <button id="btnCancel" class="btn bad">Cancel</button></p>
+        <a href="#" id="linkDelete">Delete</a>
+      </form>
+    </div>
+  </div>
+  <!-- Delete Modal -->
+  <div class="modal-del-wrapper">
+    <div class="eModal add-modal">
+      <form action="" class="md-edit-form">
+        <h3 class="del">Delete</h3>
+        <!-- <span class="close-model"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+        <i class="cus-i fa fa-times-circle-o" aria-hidden="true"></i>
+        <p>Are you sure?</p>
+        <input type="text" placeholder="Delete">
+        <button class="btn bad"><i class="fa fa-minus" aria-hidden="true"></i></button>
+      </form>
+    </div>
+  </div>
   </body>
   <script src="js/app.js" charset="utf-8"></script>
 </html>

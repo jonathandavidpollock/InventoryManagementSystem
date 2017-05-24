@@ -104,13 +104,25 @@ header{
 
 }
 //-------Modals---------//
+.modal-wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1,1,1,0.8);
+}
 //-------Add Modal---------//
+.modal{
+    margin: auto;
+}
+.eModal{
+  margin: auto;
+}
 .add-modal{
-  // border-top: 20px solid $primary;
   background-color: $light;
-  // padding: 1rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 3rem;
   width: 25%;
   box-shadow: 0 0 41px -8px rgba(0,0,0,0.75);
   h3{
@@ -147,6 +159,7 @@ header{
     }
     select{
       margin: 1rem;
+          font-size: 2rem;
     }
     p{
       margin-left: 9rem;
@@ -155,7 +168,16 @@ header{
     }
 
 }
-//-------Edit Modal---------//
+//-------Delete Modal---------//
+.modal-del-wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1,1,1,0.8);
+}
 .cus-i{
   color: $bad;
   font-size: 7rem;
