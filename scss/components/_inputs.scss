@@ -25,14 +25,3 @@ input{
   font-size: 1.6rem;
   display: inline;
 }
-
-.magnifyglass{
-  background-color: $lightblue;
-  border-radius: 0;
-  color: $primary;
-
-  &:hover{
-    background-color: $primary;
-    color: $lightblue;
-  }
-}

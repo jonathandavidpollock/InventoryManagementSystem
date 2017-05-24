@@ -1,0 +1,107 @@
+.table{
+  width: 100%;
+
+  .col{
+    flex-basis: 30%;
+
+    .title{
+      font-weight: bold;
+      font-size: 1em;
+      margin: 10px 0px 0px 0px;
+      color: $primary;
+    }
+  }
+
+  .col-small{
+    flex-basis: 8%;
+  }
+
+  .table-head{
+    font-weight: bold;
+    background-color: $primary;
+    color: white;
+    margin-top: 1px;
+
+
+    & {
+      & li{
+        padding: 1.3rem;
+        border-left: 1px solid white;
+        line-height: 3.8rem;
+      }
+
+    }
+  }
+
+
+  .table-head, .field{
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(mediumAndless){
+      display: block;
+      margin: 10px;
+      padding: 1rem;
+    }
+  }
+
+
+  & > li{
+    transition: background 100ms ease;
+
+    & > .field {
+
+      & li{
+        padding: 1.3rem;
+        border-left: 1px solid white;
+        line-height: 3.8rem;
+
+        @include mq(mediumAndless){
+          border-left: 0px;
+          padding: 0px 1rem;
+          line-height: 2rem;
+          display: block;
+
+          &:nth-last-of-type(-n+2){
+            margin: 2rem;
+            display: inline-block;
+            width: 30%;
+          }
+        }
+      }
+
+    }
+
+    &:nth-child(odd){
+      background-color: $lightblue;
+    }
+
+    &:nth-child(odd):hover{
+      background-color: lighten($primary, 45);
+    }
+
+    &:nth-child(even):hover{
+      background-color: rgba($secondary, .1);
+      @include mq(mediumAndless){
+        background-color: lighten($primary, 45);
+      }
+    }
+
+    @include mq(mediumAndless){
+      background-color: $white;
+      border-radius: 2px;
+      box-shadow: 1px 1px 3px rgba($secondary, .1);
+
+      &:nth-child(odd){
+        background-color: $white;
+        border-radius: 2px;
+      }
+
+    }
+
+  }
+
+  & > li ul li{
+    display: inline-block;
+  }
+}

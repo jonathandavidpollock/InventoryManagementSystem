@@ -17,8 +17,13 @@ body{
 header{
   display: flex;
   background: $primary;
-
   justify-content: space-between;
+
+    @include mq(mediumAndless){
+
+    flex-direction: column;
+
+    }
 
   .logo{
     display: flex;
@@ -28,16 +33,36 @@ header{
     margin: 0px;
     line-height: 75px;
 
+    img{
+      max-width: 100%;
+      width: 75px;
+      height: 75px;
+      margin-left: 1rem;
+
+    }
+
     span{
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
 
   #menu{
     padding: 0px 50px;
+
+      @include mq(mediumAndless){
+        width: 90%;
+        padding: 0px;
+        margin: 0px auto;
+        .btn{
+          width: 100%;
+          margin: 0px auto;
+        }
+
+      }
+
+
     ul li{
       display: flex;
-      // justify-content: center;
       align-items: center;
       height: 75px;
     }
@@ -49,15 +74,20 @@ header{
     display: flex;
     width: 50vw;
     margin: 50px auto;
-    // background: red;
     align-items: stretch;
     border: 1px solid rgba($primary, .4);
-    // box-shadow: 3px 3px 0px 0px rgba($primary, .4);
+    @include mq(mediumAndless){
+      width: 80vw;
+    }
 
     input{
       flex-basis: 45vw;
       padding: 2rem;
       color: $primary;
+
+      @include mq(mediumAndless){
+        flex-basis: 75vw;
+      }
     }
 
     .magnifyglass{
@@ -82,25 +112,6 @@ header{
   width: 80vw;
   margin: 0px auto;
   // background-color: rgba(black, .1);
-
-  .table{
-    width: 100%;
-
-    .table-head{
-      font-weight: bold;
-      color: $primary;
-    }
-
-    & > li ul{
-      display: flex;
-      justify-content: space-around;
-      // background: red;
-    }
-
-    & > li ul li{
-      display: inline-block;
-    }
-  }
 
 }
 

@@ -1,0 +1,12 @@
+.hide-mediumAndLess{
+  @include mq(mediumAndless){
+    display: none;
+  }
+}
+
+.show-mediumAndLess{
+  display: none;
+  @include mq(mediumAndless){
+    display: block;
+  }
+}
