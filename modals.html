@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<!-- Add Modal -->
-	<div class="add-modal">
+<!-- Add/Edit Modal -->
+<!-- 	<div class="add-modal">
 		<h3>Add Items</h3>
 		<form action="" class="md-form">
 			<label>Name 
@@ -24,10 +24,19 @@
 			</label>
 			<p><button type="submit" class="btn good cus-btn">Add</button>
 			<button class="btn bad">Cancel</button></p>
-			<!-- <button class="btn alert">Edit</button></p> -->
 			<a href="#">Delete</a>
 		</form>
-	</div>
-<!-- Edit Modal -->
+	</div> -->
+<!-- Delete Modal -->
+<div class="add-modal">
+	<form action="" class="md-edit-form">
+		<h3 class="del">Delete</h3>
+		<i class="cus-i fa fa-times-circle-o" aria-hidden="true"></i>
+		<p>Are you sure?</p>
+		<input type="text" placeholder="Delete">
+		<button class="btn bad"><i class="fa fa-minus" aria-hidden="true"></i></button>
+	</form>
+</div>
+
 </body>
 </html>

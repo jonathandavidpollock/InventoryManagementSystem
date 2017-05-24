@@ -2538,21 +2538,25 @@ header {
       display: inline-block; }
 
 .add-modal {
-  border-top: 20px solid #3b5998;
   background-color: #f7f7f7;
-  padding: 1rem;
   margin-top: 1rem;
   margin-left: 1rem;
   width: 25%;
   box-shadow: 0 0 41px -8px rgba(0, 0, 0, 0.75); }
   .add-modal h3 {
-    text-align: center; }
+    text-align: center;
+    background-color: #3b5998;
+    color: #f7f7f7;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
   .add-modal input {
     margin-left: 1rem; }
   .add-modal a {
     text-decoration: none;
     color: #081c24;
-    margin-left: 80%; }
+    margin-left: 80%;
+    padding-bottom: 1rem; }
 
 .cus-btn {
   margin-right: 3rem; }
@@ -2574,3 +2578,22 @@ header {
     margin-left: 9rem;
     margin-top: 1rem;
     margin-bottom: 1rem; }
+
+.cus-i {
+  color: #FA3E3E;
+  font-size: 7rem;
+  margin-left: 20rem; }
+
+.del {
+  background-color: #3b5998;
+  color: #f7f7f7; }
+
+.md-edit-form p {
+  text-align: center;
+  margin-top: 1rem; }
+
+.md-edit-form input {
+  margin-left: 11rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #081c24; }

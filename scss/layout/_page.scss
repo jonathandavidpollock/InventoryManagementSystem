@@ -106,15 +106,20 @@ header{
 //-------Modals---------//
 //-------Add Modal---------//
 .add-modal{
-  border-top: 20px solid $primary;
+  // border-top: 20px solid $primary;
   background-color: $light;
-  padding: 1rem;
+  // padding: 1rem;
   margin-top: 1rem;
   margin-left: 1rem;
   width: 25%;
   box-shadow: 0 0 41px -8px rgba(0,0,0,0.75);
   h3{
     text-align: center;
+    background-color: $primary;
+    color: $light;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   input{
     margin-left: 1rem;
@@ -123,7 +128,9 @@ header{
     text-decoration: none;
     color: $dark;
     margin-left: 80%;
+    padding-bottom: 1rem;
   }
+
 }
 .cus-btn{
   margin-right: 3rem;
@@ -149,4 +156,26 @@ header{
 
 }
 //-------Edit Modal---------//
+.cus-i{
+  color: $bad;
+  font-size: 7rem;
+  margin-left: 20rem;
+}
+.del{
+  background-color: $primary;
+  color: $light;
+}
+.md-edit-form{
+
+  p{
+    text-align: center;
+    margin-top: 1rem;
+  }
+  input{
+    margin-left: 11rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: $dark;
+  }
+}
 // /#list
