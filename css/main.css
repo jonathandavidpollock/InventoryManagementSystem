@@ -2536,3 +2536,41 @@ header {
           justify-content: space-around; }
     #results .table > li ul li {
       display: inline-block; }
+
+.add-modal {
+  border-top: 20px solid #3b5998;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 25%;
+  box-shadow: 0 0 41px -8px rgba(0, 0, 0, 0.75); }
+  .add-modal h3 {
+    text-align: center; }
+  .add-modal input {
+    margin-left: 1rem; }
+  .add-modal a {
+    text-decoration: none;
+    color: #081c24;
+    margin-left: 80%; }
+
+.cus-btn {
+  margin-right: 3rem; }
+
+#cus {
+  margin-left: 2.6rem; }
+
+.md-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-left: 5rem; }
+  .md-form label {
+    margin: 1rem; }
+  .md-form select {
+    margin: 1rem; }
+  .md-form p {
+    margin-left: 9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }

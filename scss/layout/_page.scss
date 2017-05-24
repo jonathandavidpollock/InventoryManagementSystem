@@ -103,5 +103,50 @@ header{
   }
 
 }
+//-------Modals---------//
+//-------Add Modal---------//
+.add-modal{
+  border-top: 20px solid $primary;
+  background-color: $light;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 25%;
+  box-shadow: 0 0 41px -8px rgba(0,0,0,0.75);
+  h3{
+    text-align: center;
+  }
+  input{
+    margin-left: 1rem;
+  }
+  a{
+    text-decoration: none;
+    color: $dark;
+    margin-left: 80%;
+  }
+}
+.cus-btn{
+  margin-right: 3rem;
+}
+#cus{
+    margin-left: 2.6rem;
+}
+.md-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    label{
+      margin: 1rem;
+    }
+    select{
+      margin: 1rem;
+    }
+    p{
+      margin-left: 9rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
 
+}
+//-------Edit Modal---------//
 // /#list
