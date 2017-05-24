@@ -17,8 +17,13 @@ body{
 header{
   display: flex;
   background: $primary;
-
   justify-content: space-between;
+
+    @include mq(mediumAndless){
+
+    flex-direction: column;
+
+    }
 
   .logo{
     display: flex;
@@ -28,16 +33,36 @@ header{
     margin: 0px;
     line-height: 75px;
 
+    img{
+      max-width: 100%;
+      width: 75px;
+      height: 75px;
+      margin-left: 1rem;
+
+    }
+
     span{
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
   }
 
   #menu{
     padding: 0px 50px;
+
+      @include mq(mediumAndless){
+        width: 90%;
+        padding: 0px;
+        margin: 0px auto;
+        .btn{
+          width: 100%;
+          margin: 0px auto;
+        }
+
+      }
+
+
     ul li{
       display: flex;
-      // justify-content: center;
       align-items: center;
       height: 75px;
     }

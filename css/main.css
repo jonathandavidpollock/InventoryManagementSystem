@@ -2546,6 +2546,10 @@ header {
   background: #3b5998;
   -ms-flex-pack: justify;
       justify-content: space-between; }
+  @media only screen and (max-width: 768px) {
+    header {
+      -ms-flex-direction: column;
+          flex-direction: column; } }
   header .logo {
     display: -ms-flexbox;
     display: flex;
@@ -2554,10 +2558,23 @@ header {
     padding: 0px;
     margin: 0px;
     line-height: 75px; }
+    header .logo img {
+      max-width: 100%;
+      width: 75px;
+      height: 75px;
+      margin-left: 1rem; }
     header .logo span {
-      margin-left: 2rem; }
+      margin-left: 1rem; }
   header #menu {
     padding: 0px 50px; }
+    @media only screen and (max-width: 768px) {
+      header #menu {
+        width: 90%;
+        padding: 0px;
+        margin: 0px auto; }
+        header #menu .btn {
+          width: 100%;
+          margin: 0px auto; } }
     header #menu ul li {
       display: -ms-flexbox;
       display: flex;
