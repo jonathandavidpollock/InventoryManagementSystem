@@ -67,7 +67,8 @@
                 </button>
               </li>
               <li class="col col-small">
-                <button class="btn add bad" data-id={{$product->id}}>
+                {{-- <a href="/products/delete/{{$product->id}}">del</a> --}}
+                <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad" data-id={{$product->id}}>
                   <span class="icon">
                   <i class="fa fa-trash" aria-hidden="true"></i>delete
                 </button>
