@@ -17,6 +17,8 @@ Route::get('/products/add', 'ProductsController@add');
 
 Route::get('/products/delete/{id}', 'ProductsController@delete');
 
+Route::get('/products/update/{id}', 'ProductsController@update');
+
 
 
 Route::get('/', function () {

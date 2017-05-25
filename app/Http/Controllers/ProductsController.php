@@ -23,7 +23,8 @@ class ProductsController extends Controller
     }
 
     public function update($id) {
-      return view('welcome',compact('products'));
+    // Products::table('products')->where("id"=>$id);
+
     }
 
 }

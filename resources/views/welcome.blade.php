@@ -63,18 +63,15 @@
                 {{$product->quantity}}
               </li>
               <li class="col col-small">
-                <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
+                <button id="btnEdit" data-id='{{$product->id}}' class="btn add alert">
                 <i class="fa fa-pencil" aria-hidden="true"></i>  edit
                 </button>
               </li>
               <li class="col col-small">
-
-                <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad" data-id={{$product->id}}>
+                <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad" data-id='{{$product->id}}'>
                     <span class="icon">
                     <i class="fa fa-trash" aria-hidden="true"></i>delete
                   </button>
-
-
               </li>
             </ul>
           </li>
