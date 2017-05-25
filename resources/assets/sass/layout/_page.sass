@@ -1,0 +1,229 @@
+html
+  font-size: $font-base-line * 1.3
+  font-size: $font-base-line
+  min-height: 100%
+
+body
+  font-family: $sitefont
+  font-size: $size
+  line-height: $lineh
+  background-color: $light
+  min-height: 100%
+
+  // color: $light;
+
+header
+  display: flex
+  background: $primary
+  justify-content: space-between
+
+  +mq(mediumAndless)
+    flex-direction: column
+
+
+  .logo
+    display: flex
+    color: $lightblue
+    font-size: 2.5em
+    padding: 0px
+    margin: 0px
+    line-height: 75px
+
+    img
+      max-width: 100%
+      width: 75px
+      height: 75px
+      margin-left: 1rem
+
+    span
+      margin-left: 1rem
+
+  #menu
+    padding: 0px 50px
+
+    +mq(mediumAndless)
+      width: 90%
+      padding: 0px
+      margin: 0px auto
+
+      .btn
+        width: 100%
+        margin: 0px auto
+
+
+    ul li
+      display: flex
+      align-items: center
+      height: 75px
+
+#search-form
+  form
+    display: flex
+    width: 50vw
+    margin: 50px auto
+    align-items: stretch
+    border: 1px solid rgba($primary, 0.4)
+
+    +mq(mediumAndless)
+      width: 80vw
+
+
+    input
+      flex-basis: 45vw
+      padding: 2rem
+      color: $primary
+
+      +mq(mediumAndless)
+        flex-basis: 75vw
+
+    .magnifyglass
+      background-color: $lightblue
+      border-radius: 0
+      color: $primary
+      flex-basis: 5vw
+      font-size: 2rem
+
+      &:hover
+        background-color: $primary
+        color: $lightblue
+
+#results
+  display: flex
+  width: 80vw
+  margin: 0px auto
+
+  // background-color: rgba(black, .1);
+
+#analytics
+  width: 80vw
+  margin: 5rem auto
+  display: flex
+  justify-content: center
+  flex-direction: row
+
+.weekView, .monthView
+  text-align: center
+  width: 45%
+  margin: 2rem auto
+  background-color: $white
+  border-bottom: 2px solid #dddfe2
+  border-radius: 2px
+
+  & > h2
+    margin: 2rem
+    line-height: 8rem
+    border-bottom: 2px solid $primary
+
+.chartWrapper
+  max-height: 300px
+  padding: 1rem
+
+canvas
+  max-height: 250px
+
+button:hover
+  cursor: pointer
+  transition: .4s
+
++mq(mediumAndless)
+  #analytics
+    flex-direction: column
+
+  .weekView, .monthView
+    width: 100%
+
+
+//-------Modals---------//
+.modal-wrapper
+  position: absolute
+  left: 0
+  top: 0
+  display: none
+  width: 100vw
+  height: 100vh
+  background-color: rgba(1, 1, 1, 0.8)
+
+//-------Add Modal---------//
+.modal
+  margin: auto
+
+.eModal
+  margin: auto
+
+.add-modal
+  background-color: $light
+  margin-top: 3rem
+  width: 25%
+  box-shadow: 0 0 41px -8px rgba(0, 0, 0, 0.75)
+
+  h3
+    text-align: center
+    background-color: $primary
+    color: $light
+    margin-bottom: 1.5rem
+    padding-top: 0.5rem
+    padding-bottom: 0.5rem
+
+  input
+    margin-left: 1rem
+
+  a
+    text-decoration: none
+    color: $dark
+    margin-left: 80%
+    padding-bottom: 1rem
+
+.cus-btn
+  margin-right: 3rem
+
+#cus
+  margin-left: 2.6rem
+
+.md-form
+  display: flex
+  flex-direction: column
+  margin-left: 5rem
+
+  label
+    margin: 1rem
+
+  select
+    margin: 1rem
+    font-size: 2rem
+
+  p
+    margin-left: 9rem
+    margin-top: 1rem
+    margin-bottom: 1rem
+
+//-------Delete Modal---------//
+.modal-del-wrapper
+  position: absolute
+  left: 0
+  top: 0
+  display: none
+  width: 100vw
+  height: 100vh
+  background-color: rgba(1, 1, 1, 0.8)
+
+.cus-i
+  color: $bad
+  font-size: 7rem
+  margin-left: 20rem
+
+.del
+  background-color: $primary
+  color: $light
+
+.md-edit-form
+  p
+    text-align: center
+    margin-top: 1rem
+
+  input
+    margin-left: 11rem
+    margin-top: 2rem
+    margin-bottom: 2rem
+    color: $dark
+
+// /#list

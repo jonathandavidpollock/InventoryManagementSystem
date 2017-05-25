@@ -1,0 +1,38 @@
+//////////// mediaqueries ////////////////
+=mq($size)
+  @if $size == small
+    @media #{$small-only}
+      @content
+  @else if $size == medium
+    @media #{$medium-only}
+      @content
+  @else if $size == large
+    @media #{$large-only}
+      @content
+  @else if $size == x-large
+    @media #{$x-large}
+      @content
+  @else if $size == smallAndBigger
+    @media #{$small-more}
+      @content
+  @else if $size == mediumAndBigger
+    @media #{$medium-more}
+      @content
+  @else if $size == largeAndBigger
+    @media #{$large-more}
+      @content
+  @else if $size == smallIntermedium
+    @media #{$small-large}
+      @content
+  @else if $size == mediumIntermedium
+    @media #{$medium-large}
+      @content
+  @else if $size == largeIntermedium
+    @media #{$large-large}
+      @content
+  @else if $size == mediumAndless
+    @media #{$medium-less}
+      @content
+  @else if $size == largeAndless
+    @media #{$large-less}
+      @content
