@@ -17,9 +17,8 @@ class ProductsController extends Controller
     }
 
     public function delete($id) {
-      $prod = DB::table('products')->find($id);
-      $prod->delete();
-      return view('welcome',compact('products'));
+      Products::destroy($id);
+      header('location:/');
     }
 
     public function update($id) {

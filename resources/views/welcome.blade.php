@@ -67,10 +67,10 @@
                 </button>
               </li>
               <li class="col col-small">
-                <button class="btn add bad" data-id={{$product->id}}>
-                  <span class="icon">
-                  <i class="fa fa-trash" aria-hidden="true"></i>delete
-                </button>
+                <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad" data-id={{$product->id}}>
+                    <span class="icon">
+                    <i class="fa fa-trash" aria-hidden="true"></i>delete
+                  </button>
               </li>
             </ul>
           </li>
