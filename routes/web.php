@@ -13,7 +13,7 @@
 
 Route::get('/products', 'ProductsController@index');
 
-Route::get('/products/add/{id}', 'ProductsController@add');
+Route::get('/products/add', 'ProductsController@add');
 
 Route::get('/products/delete/{id}', 'ProductsController@delete');
 
