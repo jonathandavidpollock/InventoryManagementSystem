@@ -38,94 +38,46 @@
         <ul class="table">
           <li class="row hide-mediumAndLess">
             <ul class="table-head">
-              <li class="col">header table</li>
-              <li class="col">header table</li>
-              <li class="col">header table</li>
+              <li class="col">Product</li>
+              <li class="col">Category</li>
+              <li class="col">Amount</li>
               <li class="col col-small"></li>
               <li class="col col-small"></li>
             </ul>
           </li>
+
+          @foreach ($products as $product)
           <li class="row">
             <ul class="field">
               <li class="col">
                 <span class="title show-mediumAndLess">Name:</span>
-                field value
+                {{$product->name}}
               </li>
               <li class="col">
                 <span class="title show-mediumAndLess">Category:</span>
-                field value
+                {{$product->categories}}
               </li>
               <li class="col">
                 <span class="title show-mediumAndLess">Amount:</span>
-                field value
+                {{$product->quantity}}
               </li>
               <li class="col col-small">
-                <button id="btnEdit" class="btn add alert">
+                <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
                 <i class="fa fa-pencil" aria-hidden="true"></i>  edit
                 </button>
               </li>
               <li class="col col-small">
-                <button class="btn add bad">
+                <button class="btn add bad" data-id={{$product->id}}>
                   <span class="icon">
                   <i class="fa fa-trash" aria-hidden="true"></i>delete
                 </button>
               </li>
             </ul>
           </li>
-          <li class="row">
-            <ul class="field">
-              <li class="col">
-                <span class="title show-mediumAndLess">Name:</span>
-                field value
-              </li>
-              <li class="col">
-                <span class="title show-mediumAndLess">Category:</span>
-                field value
-              </li>
-              <li class="col">
-                <span class="title show-mediumAndLess">Amount:</span>
-                field value
-              </li>
-              <li class="col col-small">
-                <button class="btn add alert">
-                <i class="fa fa-pencil" aria-hidden="true"></i>  edit
-                </button>
-              </li>
-              <li class="col col-small">
-                <button class="btn add bad">
-                  <span class="icon">
-                  <i class="fa fa-trash" aria-hidden="true"></i>delete
-                </button>
-              </li>
-            </ul>
-          </li>
-          <li class="row">
-            <ul class="field">
-              <li class="col">
-                <span class="title show-mediumAndLess">Name:</span>
-                field value
-              </li>
-              <li class="col">
-                <span class="title show-mediumAndLess">Category:</span>
-                field value
-              </li>
-              <li class="col">
-                <span class="title show-mediumAndLess">Amount:</span>
-                field value
-              </li>
-              <li class="col col-small">
-                <button class="btn add alert">
-                <i class="fa fa-pencil" aria-hidden="true"></i>  edit
-                </button>
-              </li>
-              <li class="col col-small">
-                <button id="btnDelete" class="btn add bad">
-                  <span class="icon">
-                  <i class="fa fa-trash" aria-hidden="true"></i>delete
-                </button>
-              </li>
-            </ul>
-          </li>
+
+          @endforeach
+
+
         </ul>
     </section>
     <section id="analytics">
@@ -150,7 +102,7 @@
   <div class="modal-wrapper">
    <div class="modal add-modal">
       <h3>Add Items</h3>
-      <form action="" class="md-form">
+      <form action="products/1" method="POST" class="md-form">
         <label>Name
           <input id="cus" type="text" id="name">
         </label>
