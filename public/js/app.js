@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -188,10 +188,16 @@ window.addEventListener("load", function () {
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
-(function webpackMissingModule() { throw new Error("Cannot find module \"/Users/jonathanpollock/Documents/_Dev/Inventory/resources/assets/sass/app.scss\""); }());
+module.exports = __webpack_require__(1);
 
 
 /***/ })
