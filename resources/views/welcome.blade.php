@@ -120,8 +120,13 @@
         <label>Quantity
           <input type="number" name="quantity">
         </label>
-        <p><button type="submit" class="btn good cus-btn">Add</button>
-        <button id="btnCancel" class="btn bad">Cancel</button></p>
+        <p>
+          <button type="submit" class="btn good cus-btn">Add</button>
+          <button id="btnCancel" class="btn bad">Cancel</button>
+          <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
+            <i class="fa fa-pencil" aria-hidden="true"></i>  edit
+          </button>
+        </p>
         <a href="#" id="linkDelete">Delete</a>
       </form>
     </div>
