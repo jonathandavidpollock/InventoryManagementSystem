@@ -13,7 +13,8 @@ class ProductsController extends Controller
     }
 
     public function add() {
-      return view('welcome',compact('products'));
+      Products::insert(['name'=>$_REQUEST["name"], 'quantity'=>$_REQUEST["quantity"],'categories'=>$_REQUEST["category"]]);
+      header('location:/');
     }
 
     public function delete($id) {

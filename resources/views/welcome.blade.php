@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Title</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -105,14 +106,15 @@
   <div class="modal-wrapper">
    <div class="modal add-modal">
       <h3>Add Items</h3>
-      <form action="products/1" method="POST" class="md-form">
+      <form action="products/add" method="GET" enctype="text/plain" class="md-form">
+          {{ csrf_field() }}
         <label>Name
-          <input id="cus" type="text" id="name">
+          <input id="cus" name="name" type="text" id="name">
         </label>
         <label>Category
-          <select>
-             <option value="Vegetables">Vegetables</option>
-             <option value="Fruits">Fruits</option>
+          <select name="category">
+             <option value="1">Vegetables</option>
+             <option value="2">Fruits</option>
           </select>
         </label>
         <label>Quantity
@@ -128,6 +130,7 @@
   <div class="modal-del-wrapper">
     <div class="eModal add-modal">
       <form action="" class="md-edit-form">
+
         <h3 class="del">Delete</h3>
         <!-- <span class="close-model"><i class="fa fa-times" aria-hidden="true"></i></span> -->
         <i class="cus-i fa fa-times-circle-o" aria-hidden="true"></i>

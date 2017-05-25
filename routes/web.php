@@ -13,9 +13,9 @@
 
 Route::get('/products', 'ProductsController@index');
 
-Route::get('/products/add/{id}', 'ProductsController@add');
+Route::get('/products/add', 'ProductsController@add');
 
-Route::delete('/products/delete/{id}', 'ProductsController@delete');
+Route::get('/products/delete/{id}', 'ProductsController@delete');
 
 
 
