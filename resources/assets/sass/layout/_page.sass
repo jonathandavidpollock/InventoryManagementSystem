@@ -12,6 +12,9 @@ body
 
   // color: $light;
 
+[contenteditable='true']
+  background-color: white
+
 header
   display: flex
   background: $primary
@@ -55,6 +58,8 @@ header
       display: flex
       align-items: center
       height: 75px
+
+
 
 #search-form
   form
@@ -115,11 +120,19 @@ header
     border-bottom: 2px solid $primary
 
 .chartWrapper
-  max-height: 300px
+  // min-height: 300px
   padding: 1rem
+  display: inline-flex
 
-canvas
-  max-height: 250px
+
+#weekChart
+  min-height: 80%
+  min-width: 60%
+
+#monthChart
+  max-height:  100%
+  max-width: 100%
+
 
 button:hover
   cursor: pointer
@@ -153,8 +166,14 @@ button:hover
 .add-modal
   background-color: $light
   margin-top: 3rem
-  width: 25%
+  width: 40%
   box-shadow: 0 0 41px -8px rgba(0, 0, 0, 0.75)
+
+  +mq(mediumAndless)
+    margin-top: 0px
+    width: 100vw
+    height: 100vh
+
 
   h3
     text-align: center
@@ -192,9 +211,9 @@ button:hover
     font-size: 2rem
 
   p
-    margin-left: 9rem
+    // margin-left: 9rem
     margin-top: 1rem
-    margin-bottom: 1rem
+    // margin-bottom: 1rem
 
 //-------Delete Modal---------//
 .modal-del-wrapper

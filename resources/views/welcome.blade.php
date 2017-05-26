@@ -60,7 +60,7 @@
               </li>
               <li class="col">
                 <span class="title show-mediumAndLess">Amount:</span>
-                {{$product->quantity}}
+                <div contenteditable="false">{{$product->quantity}}</div>
               </li>
               <li class="col col-small">
                 <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
@@ -80,20 +80,18 @@
           </li>
 
           @endforeach
-
-
         </ul>
     </section>
     <section id="analytics">
 
       <div class="weekView">
-        <h2>Week View</h2>
+        <h2>Category breakdown</h2>
         <div class="chartWrapper">
           <canvas id="weekChart"></canvas>
         </div>
       </div>
       <div class="monthView">
-        <h2>Month View</h2>
+        <h2>Inventory Breakdown</h2>
         <div class="chartWrapper">
           <canvas id="monthChart"></canvas>
         </div>
@@ -123,7 +121,7 @@
         <p>
           <button type="submit" class="btn good cus-btn">Add</button>
           <button id="btnCancel" class="btn bad">Cancel</button>
-          <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
+          <button id="btnEdit" data-id="" class="btn add alert">
             <i class="fa fa-pencil" aria-hidden="true"></i>  edit
           </button>
         </p>
@@ -146,6 +144,95 @@
     </div>
   </div>
   </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
   <script src="js/app.js" charset="utf-8"></script>
+  <script type="text/javascript">
+
+
+  /// Analytics Code  ////////////////////////////////////////////////////////
+
+  var labels1 = [];
+  var totals1 = [];
+
+  @foreach ($data as $f)
+    labels1.push({{$f->categories}});
+    totals1.push({{$f->TOTAL}});
+    // addValuesChart({{$f->categories}}, {{$f->TOTAL}})
+  @endforeach
+
+  var labels2 = [];
+  var totals2 = [];
+
+  @foreach ($products as $p)
+    labels2.push('{{$p->name}}');
+    totals2.push({{$p->quantity}});
+    // addValuesChart({{$f->categories}}, {{$f->TOTAL}})
+  @endforeach
+
+  var ctx = document.getElementById("weekChart").getContext('2d');
+  var ctx2 = document.getElementById("monthChart").getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: labels1,
+          datasets: [{
+              data: totals1,
+              backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+              borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+              borderWidth: 1
+          }]
+      }
+
+  });
+
+  var myChart2 = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+          labels: labels2,
+          datasets: [{
+              label: '# of Votes',
+              data: totals2,
+              backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+              borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+              borderWidth: 1
+          }]
+      },
+      options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+  });
+
+
+  function addValuesChart(labels, values) {
+      myChart.data.labels[0] = values;
+      myChart.data.datasets[0].data = labels;
+      myChart.update();
+  }
+
+  function addValuesChart2(values, labels) {
+      myChart2.data.datasets[0].labels = values;
+      myChart2.data.datasets[0].data = labels;
+      myChart2.update();
+  }
+
+
+  console.log(myChart);
+
+  myChart.data.datasets[0].labels = labels;
+  myChart.data.datasets[0].data = totals;
+
+  console.log();
+
+  </script>
 </html>

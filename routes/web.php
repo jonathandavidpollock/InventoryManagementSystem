@@ -22,6 +22,11 @@ Route::get('/products/delete/{id}', 'ProductsController@delete');
 Route::get('/', function () {
 
     $products = DB::table('products')->get();
+    $data = DB::SELECT(DB::raw('SELECT categories ,SUM(quantity) as TOTAL
+FROM products GROUP BY categories;'));
 
-    return view('welcome',compact('products'));
+
+    return view('welcome',compact('products', 'data'));
 });
+
+Route::post('/products/update/', 'ProductsController@update');
