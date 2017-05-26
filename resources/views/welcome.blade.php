@@ -25,12 +25,12 @@
       </nav>
     </header>
 
-    <main id="search-form">
+    <main id="search-form" style="padding-top:60px;">
 
-      <form action="">
+      {{-- <form action="">
         <input type="text" name="keyword" id="keyword" placeholder="Search here">
         <button class="btn magnifyglass"><i class="fa fa-search" aria-hidden="true" ></i></button>
-      </form>
+      </form> --}}
 
     </main>
 
@@ -52,27 +52,27 @@
             <ul class="field">
               <li class="col">
                 <span class="title show-mediumAndLess">Name:</span>
-                {{$product->name}}
+                <div class="name" contenteditable="false">{{$product->name}}</div>
               </li>
               <li class="col">
                 <span class="title show-mediumAndLess">Category:</span>
-                {{$product->categories}}
+                <div class="category" contenteditable="false">{{$product->categories}}</div>
               </li>
               <li class="col">
                 <span class="title show-mediumAndLess">Amount:</span>
-                <div contenteditable="false">{{$product->quantity}}</div>
+                <div class="quantity" contenteditable="false">{{$product->quantity}}</div>
               </li>
               <li class="col col-small">
-                <button id="btnEdit" data-id={{$product->id}} class="btn add alert">
+                <button id="btnEdit" data-id={{$product->id}} class="btn add alert button">
                 <i class="fa fa-pencil" aria-hidden="true"></i>  edit
                 </button>
               </li>
               <li class="col col-small">
 
-                <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad" data-id={{$product->id}}>
-                    <span class="icon">
-                    <i class="fa fa-trash" aria-hidden="true"></i>delete
-                  </button>
+              <button onclick="location.href='/products/delete/{{$product->id}}'" class="btn add bad delete" data-id={{$product->id}}>
+                <span class="icon">
+                <i class="fa fa-trash" aria-hidden="true"></i>delete
+              </button>
 
 
               </li>
@@ -121,29 +121,12 @@
         <p>
           <button type="submit" class="btn good cus-btn">Add</button>
           <button id="btnCancel" class="btn bad">Cancel</button>
-          <button id="btnEdit" data-id="" class="btn add alert">
-            <i class="fa fa-pencil" aria-hidden="true"></i>  edit
-          </button>
         </p>
-        <a href="#" id="linkDelete">Delete</a>
-      </form>
-    </div>
-  </div>
-  <!-- Delete Modal -->
-  <div class="modal-del-wrapper">
-    <div class="eModal add-modal">
-      <form action="" class="md-edit-form">
 
-        <h3 class="del">Delete</h3>
-        <!-- <span class="close-model"><i class="fa fa-times" aria-hidden="true"></i></span> -->
-        <i class="cus-i fa fa-times-circle-o" aria-hidden="true"></i>
-        <p>Are you sure?</p>
-        <input type="text" placeholder="Delete">
-        <button class="btn bad"><i class="fa fa-minus" aria-hidden="true"></i></button>
       </form>
     </div>
   </div>
-  </body>
+
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -226,13 +209,9 @@
       myChart2.update();
   }
 
-
-  console.log(myChart);
-
   myChart.data.datasets[0].labels = labels;
   myChart.data.datasets[0].data = totals;
 
-  console.log();
 
   </script>
 </html>
